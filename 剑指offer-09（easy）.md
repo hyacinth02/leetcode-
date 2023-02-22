@@ -3,7 +3,7 @@
 (若队列中没有元素，deleteHead 操作返回 -1 )
 
 # 求解  
-'''
+'''  
 class CQueue():
     def __init__(self):
         self.A, self.B = [],[]
