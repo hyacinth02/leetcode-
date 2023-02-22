@@ -3,7 +3,7 @@
 (若队列中没有元素，deleteHead 操作返回 -1 )
 
 # 求解  
-'''  
+``` 
 class CQueue():
     def __init__(self):
         self.A, self.B = [],[]
@@ -19,7 +19,7 @@ class CQueue():
         while self.A:
             self.B.append(self.A.pop())
         return self.B.pop()
-'''
+```
 
 # 反思
 1.list.pop()可弹出末尾数字，并从list中删除  
