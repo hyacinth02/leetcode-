@@ -70,3 +70,4 @@ if self.help   # 辅助站help非空
     else:
         self.help.append(self.help[-1])
 ```
+3.通过“if list_i”判断列表list_i是否为空：非0、非null为true，0或者null为false  
