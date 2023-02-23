@@ -50,3 +50,23 @@ class MinStack(object):
 
 # 反思
 1.定义最大值：float('inf')，最小值：float('-inf')  
+2.碰到一个很奇怪的问题：
+```
+if not self.help:
+    self.help.append(x)
+else:
+    if x<self.help[-1]:   # 新加入的数比当前最小数还小
+        self.help.append(x)
+    else:
+        self.help.append(self.help[-1])
+```
+与下面情况不同（下面不通过）
+```
+if not self.help:   # 辅助站help为空
+    self.help.append(x)
+if self.help   # 辅助站help非空
+    if x<self.help[-1]:   # 新加入的数比当前最小数还小
+        self.help.append(x)
+    else:
+        self.help.append(self.help[-1])
+```
